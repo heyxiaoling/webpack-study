@@ -4,8 +4,7 @@ var htmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   entry: {
-  	app: [path.resolve(__dirname, './src/index.js')],
-  	assign: [path.resolve(__dirname, './src/assign.js')]
+  	app: [path.resolve(__dirname, './src/app.js')],
   },
   output: {
     path: path.resolve(__dirname, './build'),
@@ -23,12 +22,7 @@ module.exports = {
 	plugins: [
 		new webpack.HotModuleReplacementPlugin(),
 		new htmlWebpackPlugin({
-	      	filename: 'index.html',
-      		chunks: ["app"]
-	    }),
-	    new htmlWebpackPlugin({
-	      	filename: 'assign.html',
-      		chunks: ["assign"]
+	      	filename: 'index.html'
 	    })
 	]
 };
