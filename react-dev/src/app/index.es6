@@ -14,6 +14,8 @@ import {AddUser} from './AddUser.es6';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Router, Route, hashHistory,Link} from 'react-router';
+require('./css/style.less');
+
 
 function determineDate() {
     import('../../libs/fun.js')
